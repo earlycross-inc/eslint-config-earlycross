@@ -1,0 +1,69 @@
+{
+  "name": "eslint-config-earlycross",
+  "version": "1.0.0",
+  "description": "ESLint shareable config for EarlyCross JavaScript/TypeScript project",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "javascript",
+    "typescript",
+    "react"
+  ],
+  "homepage": "https://github.com/earlycross-inc/eslint-config-earlycross#readme",
+  "bugs": {
+    "url": "https://github.com/earlycross-inc/eslint-config-earlycross/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earlycross-inc/eslint-config-earlycross.git"
+  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    "javascript.json",
+    "typescript.json",
+    "typescript-react.json"
+  ],
+  "scripts": {
+    "format": "prettier --loglevel warn --write .",
+    "lint": "eslint .",
+    "build": "rimraf lib && tsc && prettier --write lib",
+    "test:static": "run-s check:*",
+    "check:compile": "tsc --noEmit",
+    "check:format": "prettier --check .",
+    "test:unit": "jest"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.0.0",
+    "eslint-plugin-jsdoc": "^37.6.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-testing-library": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.2.2",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "enhanced-resolve": "^5.8.3",
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.3",
+    "tsconfig-earlycross": "^1.0.0",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.7.0"
+  }
+}

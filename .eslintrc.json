@@ -1,0 +1,10 @@
+{
+  "extends": ["./typescript.json"],
+  "env": { "node": true },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": { "project": ["./tsconfig.eslint.json"] }
+    }
+  ]
+}

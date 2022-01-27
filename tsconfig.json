@@ -1,0 +1,10 @@
+{
+  "extends": "tsconfig-earlycross/tsconfig",
+  "include": ["src"],
+  "compilerOptions": {
+    "removeComments": true,
+    "lib": ["ESNext"],
+    "module": "CommonJS",
+    "outDir": "lib"
+  }
+}
