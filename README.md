@@ -4,11 +4,13 @@ This is an ESLint shareable config that is intended for use within EarlyCross.
 
 Currently, this package contains three presets.
 
-| Presets                     | Details                                                        |
-| --------------------------- | -------------------------------------------------------------- |
-| earlycross/javascript       | For project written entirely in JavaScript                     |
-| earlycross/typescript       | For project written in TypeScript (including JavaScript)       |
-| earlycross/typescript-react | For react project written in TypeScript (including JavaScript) |
+| Presets                       | Details                                                        |
+| ----------------------------- | -------------------------------------------------------------- |
+| `earlycross/javascript`       | For project written entirely in JavaScript                     |
+| `earlycross/typescript`       | For project written in TypeScript (including JavaScript)       |
+| `earlycross/typescript-react` | For react project written in TypeScript (including JavaScript) |
+
+Plus, `earlycross/jest` preset is provided for projects which use Jest. This preset is intended to be used along with presets above.
 
 ## Dependent configs or plugins
 
@@ -16,7 +18,6 @@ Currently, this package contains three presets.
 
 - eslint-config-prettier
 - eslint-plugin-import
-- eslint-plugin-jest
 - eslint-plugin-jsdoc
 
 ### TypeScript
@@ -34,6 +35,10 @@ In addition to TypeScript
 - eslint-plugin-react
 - eslint-plugin-react-hooks
 - eslint-plugin-testing-library
+
+### Jest
+
+- eslint-plugin-jest
 
 ## Install
 
@@ -99,5 +104,20 @@ Examples of `.eslintrc.json`:
       }
     }
   ]
+}
+```
+
+### JavaScript + Jest
+
+```jsonc
+{
+  "extends": ["earlycross/javascript", "earlycross/jest"],
+  "plugins": [
+    // additional plugins
+  ],
+  "env": { "node": true },
+  "rules": {
+    // javascript rules to override
+  }
 }
 ```

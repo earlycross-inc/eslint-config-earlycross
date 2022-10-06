@@ -1,14 +1,8 @@
 import { Linter } from 'eslint';
 
 const config: Linter.BaseConfig = {
-  extends: [
-    'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:jsdoc/recommended',
-    'plugin:jest/recommended',
-    'prettier',
-  ],
-  plugins: ['import', 'jsdoc', 'jest'],
+  extends: ['eslint:recommended', 'plugin:import/recommended', 'plugin:jsdoc/recommended', 'prettier'],
+  plugins: ['import', 'jsdoc'],
   parserOptions: { ecmaVersion: 'latest' },
   rules: {
     // Possible Problems
@@ -77,9 +71,6 @@ const config: Linter.BaseConfig = {
     'jsdoc/newline-after-description': ['off'],
     'jsdoc/require-jsdoc': ['off'],
     'jsdoc/require-returns': ['off'],
-
-    // eslint-plugin-jest
-    'jest/expect-expect': ['error', { assertFunctionNames: ['expect**'] }],
   },
 };
 
